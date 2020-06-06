@@ -1,0 +1,17 @@
+/* * {
+  border: 1px solid gold;
+} */
+
+@font-face {
+  font-family: 'sango';
+  src: url('SangoUppercase-Static.otf') format('opentype')
+}
+
+.welcome-title {
+  text-transform: uppercase;
+  font-family: 'sango', Fallback, sans-serif;
+  font-size: 60px
+  /* gilbert color doesn't work in chrome */
+  /* font-family: 'gilbert-color-bold-preview5'; */
+
+}
