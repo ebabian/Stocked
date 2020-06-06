@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Show Page</h1>
+    <ul>
+      <li>Item: <%=items.name%></li>
+      <li>Type: <%=items.type%></li>
+      <li>Expiration: <%=items.expiration%></li>
+      <li>
+        <% if (items.readyToEat === true) { %>
+          Ready to Eat
+        <% } else { %>
+          Not ready to eat
+        <%  } %>
+      </li>
+    </ul>
+    <nav>
+      <a href="/items">Back</a>
+      <form action="/items/<%=items.id%>?_method=DELETE" method="POST">
+          <input type="submit" value="DELETE"/>
+      </form>
+      <a href="/items/<%=items.id%>/edit">Edit</a>
+    </nav>
+  </body>
+</html>
