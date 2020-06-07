@@ -25,7 +25,7 @@ sessions.post('/', (req, res) => {
       if (bcrypt.compareSync(req.body.password, foundUser.password)) {
         //set up a cookie with a key/value of currentUser set to foundUser
         req.session.currentUser = foundUser
-        res.redirect('/')
+        res.redirect('/items')
       } else {
         //passwords do not matche
         res.send('<a href="/"> password does not match </a>')

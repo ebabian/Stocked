@@ -1,17 +1,50 @@
-/* * {
-  border: 1px solid gold;
-} */
+* {
+  box-sizing: border-box;
+}
+body {
+  /* background-color:  #e30000; */
+}
 
 @font-face {
   font-family: 'sango';
   src: url('SangoUppercase-Static.otf') format('opentype')
 }
+@font-face {
+  font-family: 'monotonia';
+  src: url('monotonia.otf') format('opentype')
+}
 
 .welcome-title {
   text-transform: uppercase;
-  font-family: 'sango', Fallback, sans-serif;
-  font-size: 60px
-  /* gilbert color doesn't work in chrome */
-  /* font-family: 'gilbert-color-bold-preview5'; */
+  /* font-family: 'sango', Fallback, sans-serif; */
+  font-family: 'Fascinate', cursive;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: white;
+  /* letter-spacing: -10px; */
+  font-size: 80px;
+  text-align: center;
+  /* color: white; */
+  border: 2px solid white;
+  margin-top: 150px;
+  margin-bottom: 55px;
+  margin-left: 0;
+}
+#btn {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  padding: 3.5px 65px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  /* text-transform: uppercase; */
+  cursor: pointer;
+}
+#btn:hover{
+  background-color: #ff5226;
+}
 
+.login-signup {
+display: flex;
+align-items: center;
+justify-content: center;
 }
