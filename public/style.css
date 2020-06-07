@@ -11,7 +11,7 @@
   src: url('monotonia.otf') format('opentype')
 }
 
-.welcome-title {
+.welcome-title, .welcome-title-in {
   text-transform: uppercase;
   /* font-family: 'sango', Fallback, sans-serif; */
   font-family: 'Fascinate', cursive;
@@ -22,10 +22,14 @@
   font-size: 80px;
   text-align: center;
   /* color: white; */
-  border: 2px solid white;
+  /* border: 2px solid white; */
   margin-top: 150px;
   margin-bottom: 55px;
   margin-left: 0;
+}
+.welcome-title-in {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 #btn {
   color: white;
@@ -47,7 +51,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-#user, #back-btn {
+#user, #back-btn, #newItemH1 {
   font-family: sans-serif;
   text-align: center;
 }
@@ -57,7 +61,7 @@ margin-bottom: 5px;
 .submit-btn, #back-btn {
   padding:
 }
-.userName-pass{
+.userName-pass, .formNew{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,5 +72,49 @@ margin-bottom: 5px;
 .index-table a {
   text-decoration: none;
   color: black;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: helvetica;
+  font-weight: 100;
+  font-size: 14px;
+}
+.index-table td, #delete-btn{
+  font-family: helvetica;
+  font-weight: 200;
+}
+#index-table tr td{
+  border-bottom-width: 1px;
+  border-bottom-style: groove;
+}
+#index-table {
+  /* backgroun-color: */
+  height: 230px;
+  width: 430px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #E8E8E8;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.index-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav a, .logOutBtn {
+  color: white;
+  background-color: #DCDCDC;
+  border: 1.5px solid white;
+  padding: 3.5px 65px;
+  font-family: helvetica;
+  font-weight: 100;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 13px;
+  float: left;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <%- include ('../partials/head.ejs') %>
   </head>
   <body>
-    <h1>New Item Page</h1>
+    <nav>
+      <% if(currentUser) { %>
+      <a href="/items">Welcome <%=currentUser.username%></a>
+      <a href="/items">Back</a>
+      <form action="/sessions?_method=DELETE" method="post">
+          <input class="logOutBtn" type="submit" value="Log Out">
+      </form>
+      <% } %>
+    </nav>
+    <h1 class="welcome-title-in">Stocked</h1>
+    <div class="new-container">
+    <h1 id="newItemH1" >New Item</h1>
+    <div class="formNew">
     <form action="/items" method="POST">
-      <input type="text" name="name" placeholder="name"/><br/>
-      <input type="text" name="type" placeholder="type"/><br/>
-      <input type="date" name="expiration" placeholder="expiration"/><br/>
+      <input id="input" type="text" name="name" placeholder="name"/><br/>
+      <input id="input" type="text" name="type" placeholder="type"/><br/>
+      <input id="input" type="date" name="expiration"/><br/>
       Ready to Eat: <input type="checkbox" name="readyToEat"/><br/>
-      <input type="submit" value="Submit"/>
+      <input id="input" class="submit-btn" type="submit" value="Submit"/>
     </form>
+    </div>
+    </div>
   </body>
 </html>
