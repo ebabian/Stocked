@@ -4,18 +4,39 @@
     <%- include ('../partials/head.ejs') %>
   </head>
   <body>
-    <h1>Index Item Page</h1>
-    <ul>
+    <div class="index-container">
+    <h1 class="welcome-title">Stocked</h1>
+    <div class="index-table">
+    <table id="index-table" width="400" cellpadding="10" cellspacing="0">
+      <tr class="food-cell">
+      <td width="100">Food</td>
+      <td width="100">Expiration</td>
+      <td width="100">Remove Item</td>
+      </tr>
       <% for (let i = 0; i < items.length; i++) { %>
-      <li>
+      <tr>
+      <td>
         <a href="/items/<%=items[i].id%>">
-        <%=items[i].name%>
+          <%=items[i].name%>
         </a>
-      </li>
+      </td>
+      <td>
+        <a href="/items/<%=items[i].id%>">
+          <%=items[i].expiration%>
+        </a>
+      </td>
+      <td>
+        <form action="/items/<%=items[i].id%>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE"/>
+        </form>
+      </td>
+      </tr>
      <% } %>
-    </ul>
+   </table>
+    </div>
     <nav>
       <a href="/items/new">New Item</a>
     </nav>
+    </div>
   </body>
 </html>

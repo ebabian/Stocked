@@ -1,9 +1,6 @@
 * {
   box-sizing: border-box;
 }
-body {
-  /* background-color:  #e30000; */
-}
 
 @font-face {
   font-family: 'sango';
@@ -32,19 +29,44 @@ body {
 }
 #btn {
   color: white;
-  background-color: black;
-  border: 1px solid white;
+  background-color: #DCDCDC;
+  border: 1.5px solid white;
   padding: 3.5px 65px;
   font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 100;
   /* text-transform: uppercase; */
+  letter-spacing: 1px;
   cursor: pointer;
 }
 #btn:hover{
-  background-color: #ff5226;
+  background-color: #C0C0C0;
 }
 
 .login-signup {
 display: flex;
 align-items: center;
 justify-content: center;
+}
+#user, #back-btn {
+  font-family: sans-serif;
+  text-align: center;
+}
+#input {
+margin-bottom: 5px;
+}
+.submit-btn, #back-btn {
+  padding:
+}
+.userName-pass{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#food-cell {
+  height: 200px;
+}
+.index-table a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
