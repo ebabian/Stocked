@@ -20,10 +20,16 @@
     <ul id="showUl">
       <li>Type: <%=items.type%></li>
       <li>Qty: <%=items.qty%></li>
+      <li>Price: <%=items.price%></li>
       <li>Expiration: <%=items.expiration%></li>
-      <li>Recipes: <%=items.url%></li>
     </ul>
     </div>
+    <iframe src="<%=items.url%>" width="300" height="380" frameholder="0"
+      allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe src="<%=items.url2%>" width="300" height="380" frameholder="0"
+      allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe src="<%=items.url3%>" width="300" height="380" frameholder="0"
+      allowtransparency="true" allow="encrypted-media"></iframe>
     <div class="showBtn">
     <form action="/items/<%=items.id%>?_method=DELETE" method="POST">
         <input id="delete-btn2" type="submit" value="Delete"/>

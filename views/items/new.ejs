@@ -15,14 +15,17 @@
       <% } %>
     </nav>
     <div class="new-container">
-    <h1 id="newItemH1" >New Item</h1>
+    <h1 id="newItemH1">New Item</h1>
     <div class="formNew">
     <form action="/items" method="POST">
       <input id="input" type="text" name="name" placeholder="name"/><br/>
       <input id="input" type="text" name="type" placeholder="type"/><br/>
       <input id="input" type="number" name="qty" placeholder="qty"><br/>
+      <input id="input" type="text" name="price" data-type="currency" placeholder="$15.00"><br/>
       <input id="input" type="date" name="expiration"/><br/>
-      <input id="input" type="url" name="url" placeholder="https://example.com"><br/>
+      <input id="input" type="text" name="url" placeholder="https://example.com"><br/>
+      <input id="input" type="text" name="url2" placeholder="https://example.com"><br/>
+      <input id="input" type="text" name="url3" placeholder="https://example.com"><br/>
       <input id="input" class="submit-btn" type="submit" value="Submit"/>
     </form>
     </div>
