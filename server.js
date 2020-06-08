@@ -10,8 +10,8 @@ let bodyParser = require('body-parser')
 require('dotenv').config()
 const app = express();
 const db = mongoose.connection
-const PORT = process.env.PORT
-const mongodbURI = process.env.MONGODBURI
+const PORT = process.env.PORT || 3333
+const MONGODB_URI = process.env.MONGODBURI
 
 //Middleware
 app.use(express.urlencoded({extended:true}));
@@ -27,7 +27,7 @@ app.use(session({
 
 // Database
 mongoose.connect(
-    'mongodb://localhost:27017/inventory',
+    MONGODB_URI,
     {
         useNewUrlParser:true,
         useUnifiedTopology:true,
@@ -40,6 +40,7 @@ mongoose.connect(
 );
 
 db.on('error', err => console.log(err.message + ' is mongod not running?'))
+db.on('connected', () => console.log('mongo connected: ', MONGODB_URI))
 db.on('disconnected', () => console.log('mongo disconnected'))
 
 const itemController = require('./controllers/routes.js')
@@ -56,6 +57,6 @@ app.get('/', (req, res) => {
   res.render('items/welcome.ejs')
 })
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('listening');
 })
