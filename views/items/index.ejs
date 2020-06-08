@@ -16,7 +16,7 @@
       <tr class="food-cell">
       <td id="cell" width="140">Food</td>
       <td id="cell" width="130">Expiration</td>
-      <td id="cell" width="130">Remove Item</td>
+      <td id="cell" width="130">Remove</td>
       </tr>
       <% for (let i = 0; i < items.length; i++) { %>
       <tr id="tab-food">
@@ -32,7 +32,7 @@
       </td>
       <td id="tab-food2">
         <form action="/items/<%=items[i].id%>?_method=DELETE" method="POST">
-            <input id="delete-btn" type="submit" value="Delete"/>
+            <input id="delete-btn" type="image" value="delete" src="https://img.icons8.com/small/16/000000/delete-sign.png"/>
         </form>
       </td>
       </tr>

@@ -9,6 +9,7 @@
     <form action="/items/<%=items.id%>?_method=PUT" method="POST">
       <input type="text" name="name" value="<%=items.name%>"><br/>
       <input type="text" name="type" value="<%=items.type%>"><br/>
+      <input type="number" name="qty" placeholder="Qty" value="<%=items.qty%>"><br/>
       <input type="date" name="expiration" value="<%=items.expiration%>"><br/>
       Ready to Eat:
       <input
