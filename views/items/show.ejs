@@ -24,12 +24,14 @@
       <li>Expiration: <%=items.expiration%></li>
     </ul>
     </div>
-    <iframe src="<%=items.url%>" width="300" height="380" frameholder="0"
-      allowtransparency="true" allow="encrypted-media"></iframe>
-    <iframe src="<%=items.url2%>" width="300" height="380" frameholder="0"
-      allowtransparency="true" allow="encrypted-media"></iframe>
-    <iframe src="<%=items.url3%>" width="300" height="380" frameholder="0"
-      allowtransparency="true" allow="encrypted-media"></iframe>
+    <div class="iframe">
+      <iframe id="iframe" src="<%=items.url%>" width="290" height="330" frameholder="0"
+        allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe id="iframe" src="<%=items.url2%>" width="290" height="330" frameholder="0"
+        allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe id="iframe" src="<%=items.url3%>" width="290" height="330" frameholder="0"
+        allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
     <div class="showBtn">
     <form action="/items/<%=items.id%>?_method=DELETE" method="POST">
         <input id="delete-btn2" type="submit" value="Delete"/>

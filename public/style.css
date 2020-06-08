@@ -170,7 +170,7 @@ font-family: sans-serif;
 border: 1px solid black;
 border-radius: 10px;
 background-color:rgba(255, 100, 100, .8);
-padding: 60px 85px;
+padding: 40px 300px;
 }
 #showUl li {
   padding-bottom: 10px;
@@ -195,4 +195,13 @@ input:focus{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.iframe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+#iframe {
+  margin: 20px;
 }
