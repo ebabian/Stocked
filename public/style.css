@@ -14,6 +14,10 @@
   font-family: 'foerte';
   src: url('FOERTE.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'stella';
+  src: url('Stella Demo.otf') format('opentype')
+}
 .welcome-title, .welcome-title-in {
   /* text-transform: uppercase; */
   /* font-family: 'sango', Fallback, sans-serif; */
@@ -23,7 +27,8 @@
   -webkit-text-fill-color: black; */
   /* letter-spacing: -10px; */
   /* font-family: 'Playfair Display', serif; */
-  font-family: 'foerte', Fallback, sans-serif;
+  /* font-family: 'foerte', Fallback, sans-serif; */
+  font-family: 'stella', Fallback, serif;
   color: rgb(255,255,0, .9);
   font-weight: 100;
   font-size: 100px;
@@ -35,9 +40,13 @@
   margin-left: 0;
   letter-spacing: 2px;
 }
+
 .welcome-title-in {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 60px;
+  margin-left: -150px;
+  /* position: absolute; */
+  font-size: 70px;
+  padding-right: 5px;
 }
 #btn {
   color: white;
@@ -144,6 +153,7 @@ nav {
   align-items: center;
   justify-content: center;
   height: 40px;
+  /* position: relative; */
 }
 body{
   background-color: #181818;
