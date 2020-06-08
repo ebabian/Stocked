@@ -11,24 +11,6 @@ const isAuthenticated = (req, res, next) => {
   }
 }
 
-
-// ---- Routes ----
-router.get('/seed', (req, res) => {
-  Item.create(
-    [
-      {
-        name: 'grapefruit',
-        type: 'fruit',
-        expiration: 061520,
-        readyToEat: true
-      }
-    ],
-    (err, data) => {
-      res.redirect('/items')
-    }
-  )
-})
-
 // Index
 router.get('/', (req, res) => {
   Item.find({}, (err, allItems) => {
@@ -74,20 +56,15 @@ router.get('/:id/edit', (req, res) => {
   })
 })
 
-// Put
+// Put / Update
 router.put('/:id', (req, res) => {
   Item.findByIdAndUpdate(req.params.id, req.body, (err, updateModel) => {
-    res.redirect('/items/')
+    res.redirect('/items')
   })
 })
 
 // Create / Post
 router.post('/', (req, res) => {
-  if (req.body.readyToEat === 'on') {
-    req.body.readyToEat = true
-  } else {
-    req.body.readyToEat = false
-  }
   Item.create(req.body, (err, newItem) => {
     if (err) {
       console.log(err);

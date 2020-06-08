@@ -22,15 +22,7 @@
       <input id="input" type="text" name="type" value="<%=items.type%>"><br/>
       <input id="input" type="number" name="qty" value="<%=items.qty%>"><br/>
       <input id="input" type="date" name="expiration" value="<%=items.expiration%>"><br/>
-      Ready to Eat:
-      <input id="input"
-      type="checkbox"
-      name="readyToEat"
-      <% if (items.readyToEat === true) { %>
-        checked
-      <% } %>
-      />
-      <br/>
+      <input id="input" type="url" name="url" value="<%=items.url%>">
       <input class="submitBtn" type="submit" value="Submit Changes">
     </form>
   </div>

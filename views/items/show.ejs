@@ -21,13 +21,7 @@
       <li>Type: <%=items.type%></li>
       <li>Qty: <%=items.qty%></li>
       <li>Expiration: <%=items.expiration%></li>
-      <li>
-        <% if (items.readyToEat === true) { %>
-          Ready to Eat
-        <% } else { %>
-          Not ready to eat
-        <%  } %>
-      </li>
+      <li>Recipes: <%=items.url%></li>
     </ul>
     </div>
     <div class="showBtn">
