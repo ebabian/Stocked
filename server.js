@@ -7,9 +7,9 @@ let bodyParser = require('body-parser')
 
 
 //Configuration
-require('dotenv').config()
 const app = express();
 const db = mongoose.connection
+require('dotenv').config()
 const PORT = process.env.PORT || 3333
 const MONGODB_URI = process.env.MONGODB_URI
 
@@ -26,6 +26,7 @@ app.use(session({
 )
 
 // Database
+
 mongoose.connect(
     MONGODB_URI,
     {
