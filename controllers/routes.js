@@ -77,7 +77,7 @@ router.get('/:id/edit', (req, res) => {
 // Put
 router.put('/:id', (req, res) => {
   Item.findByIdAndUpdate(req.params.id, req.body, (err, updateModel) => {
-    res.redirect('/items')
+    res.redirect('/items/')
   })
 })
 

@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+  <%- include ('../partials/head.ejs') %>
   </head>
   <body>
-    <h1>Edit Page</h1>
+    <nav>
+      <h1 class="welcome-title-in">Stocked</h1>
+      <% if(currentUser) { %>
+      <a href="/items">Welcome <%=currentUser.username%></a>
+      <form action="/sessions?_method=DELETE" method="post">
+          <input class="logOutBtn" type="submit" value="Log Out">
+      </form>
+      <a href="/items">Back</a>
+      <% } %>
+    </nav>
+    <div class="new-container">
+    <h1 id="showH1">Edit <%=items.name%></h1>
+    <div class="formNew">
     <form action="/items/<%=items.id%>?_method=PUT" method="POST">
-      <input type="text" name="name" value="<%=items.name%>"><br/>
-      <input type="text" name="type" value="<%=items.type%>"><br/>
-      <input type="number" name="qty" placeholder="Qty" value="<%=items.qty%>"><br/>
-      <input type="date" name="expiration" value="<%=items.expiration%>"><br/>
+      <input id="input" type="text" name="name" value="<%=items.name%>"><br/>
+      <input id="input" type="text" name="type" value="<%=items.type%>"><br/>
+      <input id="input" type="number" name="qty" value="<%=items.qty%>"><br/>
+      <input id="input" type="date" name="expiration" value="<%=items.expiration%>"><br/>
       Ready to Eat:
-      <input
+      <input id="input"
       type="checkbox"
       name="readyToEat"
       <% if (items.readyToEat === true) { %>
@@ -20,8 +31,9 @@
       <% } %>
       />
       <br/>
-      <input type="submit" value="Submit Changes">
+      <input class="submitBtn" type="submit" value="Submit Changes">
     </form>
-    <a href="/items/">Home</a>
+  </div>
+  </div>
   </body>
 </html>

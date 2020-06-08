@@ -6,6 +6,7 @@
   <body>
     <nav>
       <% if(currentUser) { %>
+      <h1 class="welcome-title-in">Stocked</h1>
       <a href="/items">Welcome <%=currentUser.username%></a>
       <a href="/items">Back</a>
       <form action="/sessions?_method=DELETE" method="post">
@@ -13,7 +14,6 @@
       </form>
       <% } %>
     </nav>
-    <h1 class="welcome-title-in">Stocked</h1>
     <div class="new-container">
     <h1 id="newItemH1" >New Item</h1>
     <div class="formNew">

@@ -29,7 +29,7 @@
   /* font-family: 'Playfair Display', serif; */
   /* font-family: 'foerte', Fallback, sans-serif; */
   font-family: 'stella', Fallback, serif;
-  color: rgb(255,255,0, .9);
+  color: rgb(255,255,0);
   font-weight: 100;
   font-size: 100px;
   text-align: center;
@@ -91,7 +91,7 @@ padding: 5px 28px;
 }
 .index-table a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-family: helvetica;
   font-weight: 100;
   font-size: 14px;
@@ -101,7 +101,7 @@ padding: 5px 28px;
   font-weight: 200;
 }
 #index-table{
-  box-shadow: 2px 2px yellow;
+  box-shadow: 3px 3px 2px black;
 }
 #tab-food, #tab-food2{
   border-top-width: 1px;
@@ -116,17 +116,19 @@ padding: 5px 28px;
 }
 #index-table {
   /* backgroun-color: */
-  height: 230px;
+  height: 380px;
   width: 430px;
   border: 1px solid black;
   border-radius: 5px;
+  background-color: rgba(255, 100, 100, .8);
+  margin-top: 100px;
 }
 .index-table {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-nav a, .logOutBtn, #delete-btn2  {
+nav a, .logOutBtn, #delete-btn2, #edit-btn {
   color: white;
   background-color: #282828;
   border: 1.5px solid #181818;
@@ -165,4 +167,28 @@ body{
 list-style: none;
 color: white;
 font-family: sans-serif;
+border: 1px solid black;
+border-radius: 10px;
+background-color:rgba(255, 100, 100, .8);
+padding: 60px 85px;
+}
+#showUl li {
+  padding-bottom: 10px;
+}
+.in-name a{
+  margin-left: 5px;
+}
+input:focus{
+  color: #181818;
+  outline: 1px white;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.showBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

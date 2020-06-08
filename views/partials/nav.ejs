@@ -3,8 +3,8 @@
 
 <% if(currentUser) { %>
 <a href="/items">Welcome <%=currentUser.username%></a>
-<a href="/items/new">New Item</a>
 <form action="/sessions?_method=DELETE" method="post">
     <input class="logOutBtn" type="submit" value="Log Out">
 </form>
+<a href="/items/new">New Item</a>
 <% } %>

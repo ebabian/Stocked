@@ -8,16 +8,18 @@
       <h1 class="welcome-title-in">Stocked</h1>
       <% if(currentUser) { %>
       <a href="/items">Welcome <%=currentUser.username%></a>
-      <a href="/items">Back</a>
       <form action="/sessions?_method=DELETE" method="post">
           <input class="logOutBtn" type="submit" value="Log Out">
       </form>
+      <a href="/items">Back</a>
       <% } %>
     </nav>
-    <h1 id="showH1">Show Page</h1>
+    <div class="list-div">
+    <h1 id="showH1"><%=items.name%></h1>
+    <div class="list-item">
     <ul id="showUl">
-      <li>Item: <%=items.name%></li>
       <li>Type: <%=items.type%></li>
+      <li>Qty: <%=items.qty%></li>
       <li>Expiration: <%=items.expiration%></li>
       <li>
         <% if (items.readyToEat === true) { %>
@@ -27,11 +29,13 @@
         <%  } %>
       </li>
     </ul>
-    <nav>
-      <form action="/items/<%=items.id%>?_method=DELETE" method="POST">
-          <input id="delete-btn2" type="submit" value="Delete"/>
-      </form>
-      <a href="/items/<%=items.id%>/edit">Edit</a>
-    </nav>
+    </div>
+    <div class="showBtn">
+    <form action="/items/<%=items.id%>?_method=DELETE" method="POST">
+        <input id="delete-btn2" type="submit" value="Delete"/>
+    </form>
+    <a id="edit-btn" href="/items/<%=items.id%>/edit">Edit</a>
+    </div>
+    </div>
   </body>
 </html>
