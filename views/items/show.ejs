@@ -18,12 +18,14 @@
     <h1 id="showH1"><%=items.name%></h1>
     <div class="list-item">
     <ul id="showUl">
+      <h5>INFORMATION</h5>
       <li>Type: <%=items.type%></li>
       <li>Qty: <%=items.qty%></li>
       <li>Price: <%=items.price%></li>
       <li>Expiration: <%=items.expiration%></li>
     </ul>
     </div>
+    <h5 id="recipe">PLANNED RECIPES</h5>
     <div class="iframe">
       <iframe id="iframe" src="<%=items.url%>" width="290" height="330" frameholder="0"
         allowtransparency="true" allow="encrypted-media"></iframe>
@@ -37,7 +39,6 @@
         <input id="delete-btn2" type="submit" value="Delete"/>
     </form>
     <a id="edit-btn" href="/items/<%=items.id%>/edit">Edit</a>
-    </div>
     </div>
   </body>
 </html>

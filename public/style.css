@@ -73,6 +73,9 @@ justify-content: center;
   text-align: center;
   color: white;
 }
+#showH1 {
+  margin-top: 80px;
+}
 #input {
 margin-bottom: 5px;
 padding: 5px 28px;
@@ -167,17 +170,23 @@ body{
 list-style: none;
 color: white;
 font-family: sans-serif;
-border: 1px solid black;
+/* border: 1px solid #181818; */
 border-radius: 10px;
-background-color:rgba(255, 100, 100, .8);
-padding: 40px 300px;
+/* background-color: #282828; */
+margin-left: 30px;
+margin-bottom: 150px;
+}
+h5{
+  font-family: helvetica;
+  font-weight: 300;
 }
 #showUl li {
   padding-bottom: 10px;
-  color: black;
+  color: white;
   font-family: helvetica;
   font-weight: 100;
   font-size: 14px;
+  margin-left: 40px;
 }
 .in-name a{
   margin-left: 15px;
@@ -186,15 +195,12 @@ input:focus{
   color: #181818;
   outline: 1px white;
 }
-.list-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .showBtn {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 70px;
+  margin-bottom: 200px;
 }
 .iframe {
   display: flex;
@@ -204,4 +210,10 @@ input:focus{
 }
 #iframe {
   margin: 20px;
+}
+#recipe{
+  color: white;
+  font-family: helvetica;
+  font-weight: 300;
+  margin-left: 70px
 }
