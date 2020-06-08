@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <%- include ('../partials/head.ejs') %>
   </head>
   <body>
-    <h1>Show Page</h1>
-    <ul>
+    <nav>
+      <% if(currentUser) { %>
+      <a href="/items">Welcome <%=currentUser.username%></a>
+      <a href="/items">Back</a>
+      <form action="/sessions?_method=DELETE" method="post">
+          <input class="logOutBtn" type="submit" value="Log Out">
+      </form>
+      <% } %>
+    </nav>
+    <h1 class="welcome-title-in">Stocked</h1>
+    <h1 id="showH1">Show Page</h1>
+    <ul id="showUl">
       <li>Item: <%=items.name%></li>
       <li>Type: <%=items.type%></li>
       <li>Expiration: <%=items.expiration%></li>
@@ -19,9 +28,8 @@
       </li>
     </ul>
     <nav>
-      <a href="/items">Back</a>
       <form action="/items/<%=items.id%>?_method=DELETE" method="POST">
-          <input type="submit" value="DELETE"/>
+          <input id="delete-btn2" type="submit" value="Delete"/>
       </form>
       <a href="/items/<%=items.id%>/edit">Edit</a>
     </nav>

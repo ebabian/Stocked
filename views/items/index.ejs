@@ -8,27 +8,29 @@
       <%- include ('../partials/nav.ejs') %>
     </nav>
     <div class="index-container">
-    <h1 class="welcome-title-in">Stocked</h1>
+    <div class="title">
+      <h1 class="welcome-title-in">Stocked</h1>
+    </div>
     <div class="index-table">
     <table id="index-table" width="450" cellpadding="10" cellspacing="0">
       <tr class="food-cell">
-      <td width="140">Food</td>
-      <td width="130">Expiration</td>
-      <td width="130">Remove Item</td>
+      <td id="cell" width="140">Food</td>
+      <td id="cell" width="130">Expiration</td>
+      <td id="cell" width="130">Remove Item</td>
       </tr>
       <% for (let i = 0; i < items.length; i++) { %>
-      <tr>
-      <td>
+      <tr id="tab-food">
+      <td id="tab-food">
         <a href="/items/<%=items[i].id%>">
           <%=items[i].name%>
         </a>
       </td>
-      <td>
+      <td id="tab-food2">
         <a href="/items/<%=items[i].id%>">
           <%=items[i].expiration%>
         </a>
       </td>
-      <td>
+      <td id="tab-food2">
         <form action="/items/<%=items[i].id%>?_method=DELETE" method="POST">
             <input id="delete-btn" type="submit" value="Delete"/>
         </form>

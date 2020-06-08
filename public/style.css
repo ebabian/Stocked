@@ -10,22 +10,30 @@
   font-family: 'monotonia';
   src: url('monotonia.otf') format('opentype')
 }
-
+@font-face {
+  font-family: 'foerte';
+  src: url('FOERTE.ttf') format('truetype');
+}
 .welcome-title, .welcome-title-in {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   /* font-family: 'sango', Fallback, sans-serif; */
-  font-family: 'Fascinate', cursive;
-  -webkit-text-stroke-width: 1.2px;
-  -webkit-text-stroke-color: black;
-  -webkit-text-fill-color: white;
+  /* font-family: 'Fascinate', cursive; */
+  /* -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: white;
+  -webkit-text-fill-color: black; */
   /* letter-spacing: -10px; */
-  font-size: 80px;
+  /* font-family: 'Playfair Display', serif; */
+  font-family: 'foerte', Fallback, sans-serif;
+  color: rgb(255,255,0, .9);
+  font-weight: 100;
+  font-size: 100px;
   text-align: center;
   /* color: white; */
   /* border: 2px solid white; */
   margin-top: 150px;
   margin-bottom: 55px;
   margin-left: 0;
+  letter-spacing: 2px;
 }
 .welcome-title-in {
   margin-top: 50px;
@@ -33,8 +41,8 @@
 }
 #btn {
   color: white;
-  background-color: #DCDCDC;
-  border: 1.5px solid white;
+  background-color: #282828;
+  border: 1.5px solid #181818;
   padding: 3.5px 65px;
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 100;
@@ -51,15 +59,18 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-#user, #back-btn, #newItemH1 {
+#user, #back-btn, #newItemH1, #showH1 {
   font-family: sans-serif;
   text-align: center;
+  color: white;
 }
 #input {
 margin-bottom: 5px;
+padding: 5px 28px;
 }
-.submit-btn, #back-btn {
-  padding:
+#back-btn button, .submit-btn{
+  padding: 5px 30px;
+  cursor: pointer;
 }
 .userName-pass, .formNew{
   display: flex;
@@ -71,7 +82,7 @@ margin-bottom: 5px;
 }
 .index-table a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-family: helvetica;
   font-weight: 100;
   font-size: 14px;
@@ -80,9 +91,19 @@ margin-bottom: 5px;
   font-family: helvetica;
   font-weight: 200;
 }
-#index-table tr td{
-  border-bottom-width: 1px;
-  border-bottom-style: groove;
+#index-table{
+  box-shadow: 2px 2px yellow;
+}
+#tab-food, #tab-food2{
+  border-top-width: 1px;
+  border-top-style: groove;
+    /* text-align: center; */
+}
+#tab-food2 {
+  text-align: center;
+}
+#cell {
+  text-align: center;
 }
 #index-table {
   /* backgroun-color: */
@@ -90,21 +111,17 @@ margin-bottom: 5px;
   width: 430px;
   border: 1px solid black;
   border-radius: 5px;
-  background-color: #E8E8E8;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
 }
 .index-table {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-nav a, .logOutBtn {
+nav a, .logOutBtn, #delete-btn2  {
   color: white;
-  background-color: #DCDCDC;
-  border: 1.5px solid white;
-  padding: 3.5px 65px;
+  background-color: #282828;
+  border: 1.5px solid #181818;
+  padding: 5px 65px;
   font-family: helvetica;
   font-weight: 100;
   letter-spacing: 1px;
@@ -113,8 +130,29 @@ nav a, .logOutBtn {
   font-size: 13px;
   float: left;
 }
+a:hover{
+background-color: #C0C0C0;
+}
+.logOutBtn:hover{
+background-color: #C0C0C0;
+}
+#delete-btn2:hover{
+background-color: #C0C0C0;
+}
 nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 40px;
+}
+body{
+  background-color: #181818;
+}
+#checkImg{
+  width: 33.3%;
+}
+#showUl{
+list-style: none;
+color: white;
+font-family: sans-serif;
 }
