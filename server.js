@@ -11,7 +11,7 @@ require('dotenv').config()
 const app = express();
 const db = mongoose.connection
 const PORT = process.env.PORT || 3333
-const MONGODB_URI = process.env.MONGODBURI
+const MONGODB_URI = process.env.MONGODB_URI
 
 //Middleware
 app.use(express.urlencoded({extended:true}));
