@@ -217,3 +217,9 @@ input:focus{
   font-weight: 300;
   margin-left: 70px
 }
+#new-label {
+  color: white;
+  font-family: helvetica;
+  font-weight: 300;
+  margin-top: 5px;
+}
