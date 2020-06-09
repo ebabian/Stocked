@@ -22,11 +22,13 @@
       <input id="input" type="text" name="type" value="<%=items.type%>"><br/>
       <input id="input" type="number" name="qty" value="<%=items.qty%>"><br/>
       <input id="input" type="text" name="price" data-type="currency" placeholder="$15.00" value="<%=items.price%>"><br/>
+      <label id="new-label" for="expiration">Expiration Date</label><br/>
       <input id="input" type="date" name="expiration" value="<%=items.expiration%>"><br/>
-      <input id="input" type="text" name="url" value="<%=items.url%>"><br/>
-      <input id="input" type="text" name="url" value="<%=items.url2%>"><br/>
-      <input id="input" type="text" name="url" value="<%=items.url3%>"><br/>
-      <input class="submitBtn" type="submit" value="Submit Changes">
+      <label id="new-label" for="url">Recipe Link</label><br/>
+      <input id="input" type="text" name="url" value="<%=items.url%>" placeholder="https://example.com"><br/>
+      <input id="input" type="text" name="url2" value="<%=items.url2%>" placeholder="https://example.com"><br/>
+      <input id="input" type="text" name="url3" value="<%=items.url3%>" placeholder="https://example.com"><br/>
+      <input class="submitBtn" type="submit" value="Submit Changes"/>
     </form>
   </div>
   </div>

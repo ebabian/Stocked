@@ -18,15 +18,18 @@
     <h1 id="showH1"><%=items.name%></h1>
     <div class="list-item">
     <ul id="showUl">
-      <h5>INFORMATION</h5>
+      <h4>INFORMATION</h4>
       <li>Type: <%=items.type%></li>
       <li>Qty: <%=items.qty%></li>
       <li>Price: <%=items.price%></li>
       <li>Expiration: <%=items.expiration%></li>
     </ul>
     </div>
-    <h5 id="recipe">PLANNED RECIPES</h5>
+    <h4 id="recipe">PLANNED RECIPES</h4>
     <div class="iframe">
+      <%= if (!items.url) { %>
+
+      }
       <iframe id="iframe" src="<%=items.url%>" width="290" height="330" frameholder="0"
         allowtransparency="true" allow="encrypted-media"></iframe>
       <iframe id="iframe" src="<%=items.url2%>" width="290" height="330" frameholder="0"
