@@ -25,17 +25,22 @@
       <li>Expiration: <%=items.expiration%></li>
     </ul>
     </div>
-    <h4 id="recipe">PLANNED RECIPES</h4>
+    <% if (items.url || items.url2 || items.url3) { %>
+      <h4 id="recipe">PLANNED RECIPES</h4>
+    <% } %>
     <div class="iframe">
-      <%= if (!items.url) { %>
-
-      }
-      <iframe id="iframe" src="<%=items.url%>" width="290" height="330" frameholder="0"
-        allowtransparency="true" allow="encrypted-media"></iframe>
-      <iframe id="iframe" src="<%=items.url2%>" width="290" height="330" frameholder="0"
-        allowtransparency="true" allow="encrypted-media"></iframe>
-      <iframe id="iframe" src="<%=items.url3%>" width="290" height="330" frameholder="0"
-        allowtransparency="true" allow="encrypted-media"></iframe>
+      <% if (items.url) { %>
+        <iframe id="iframe" src="<%=items.url%>" width="290" height="330" frameholder="0"
+          allowtransparency="true" allow="encrypted-media"></iframe>
+      <% } %>
+      <% if (items.url2) { %>
+        <iframe id="iframe" src="<%=items.url2%>" width="290" height="330" frameholder="0"
+          allowtransparency="true" allow="encrypted-media"></iframe>
+      <%  } %>
+      <% if (items.url3) { %>
+        <iframe id="iframe" src="<%=items.url3%>" width="290" height="330" frameholder="0"
+          allowtransparency="true" allow="encrypted-media"></iframe>
+      <% } %>
     </div>
     <div class="showBtn">
     <form action="/items/<%=items.id%>?_method=DELETE" method="POST">

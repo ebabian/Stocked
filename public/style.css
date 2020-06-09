@@ -60,9 +60,11 @@
   cursor: pointer;
 }
 #btn:hover{
-  background-color: #C0C0C0;
+  background-color: #484848;
 }
-
+#btn:focus{
+  outline: none;
+}
 .login-signup {
 display: flex;
 align-items: center;
@@ -112,10 +114,12 @@ padding: 5px 28px;
     /* text-align: center; */
 }
 #tab-food2 {
-  text-align: center;
+  /* text-align: center; */
 }
 #cell {
-  text-align: center;
+  /* text-align: center; */
+  color: white;
+  font-size: 14px;
 }
 #index-table {
   /* backgroun-color: */
@@ -145,13 +149,13 @@ nav a, .logOutBtn, #delete-btn2, #edit-btn {
   float: left;
 }
 a:hover{
-background-color: #C0C0C0;
+background-color: #484848;
 }
 .logOutBtn:hover{
-background-color: #C0C0C0;
+background-color: #484848;
 }
 #delete-btn2:hover{
-background-color: #C0C0C0;
+background-color: #484848;
 }
 nav {
   display: flex;
