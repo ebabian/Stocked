@@ -31,12 +31,3 @@ based on the type of food the user has, the compost section would
 let the user know if it can be composted. There is a feature on Stocked
 to input the expiration date of an item and I would like to add to this
 by alerting the user when that item is near it's expiration.
-
-
-#### Challenges:
-
-
-#### Biggest Takeaway:
-
-
-#### 
