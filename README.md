@@ -5,7 +5,7 @@ Live Link: https://protected-dusk-30011.herokuapp.com/
 
 
 
-## SEI Project Two: Stocked
+### SEI Project Two: Stocked
 Stocked is a live app that functions to track food by logging a digital
 inventory. The idea of Stocked was inspired during quarantine with my
 family since we are buying groceries every two weeks for five people
@@ -13,11 +13,14 @@ it is essential we don't let food get wasted and go bad.
 Stocked is user friendly for all age groups but is targeted for
 people 20+ years old.
 
+
 #### Features:
-- Log in & Sign up
-- Create a new item
-- Edit an item
-- Delete an item
+- Log in, Sign up, and Log Out
+- Create a new food item
+- Edit a food item
+- Delete a food item
+- Input up to 3 recipes and displays recipe url preview
+- Input expiration date, item name, price of item, and quantity.
 
 
 #### If I had more time:
@@ -31,3 +34,9 @@ by alerting the user when that item is near it's expiration.
 
 
 #### Challenges:
+
+
+#### Biggest Takeaway:
+
+
+#### 
