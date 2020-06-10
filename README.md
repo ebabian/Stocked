@@ -13,6 +13,8 @@ it is essential we don't let food get wasted and go bad.
 Stocked is user friendly for all age groups but is targeted for
 people 20+ years old.
 
+#### User Story:
+Are you buying produce you're excited to cook meals with and then forget about it in your fridge and it gets moldy? Stress no further, with Stocked you can track your food and plan recipes based on the produce you have. It's hard to keep track of all the food you have, but with Stocked we'd like to help make that easier for you. 
 
 #### Features:
 - Log in, Sign up, and Log Out
